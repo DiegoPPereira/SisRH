@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class EsqueciSenhaPage extends StatelessWidget {
   const EsqueciSenhaPage({super.key});
@@ -8,10 +6,10 @@ class EsqueciSenhaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff687cf3),
+      backgroundColor: const Color(0xff687cf3),
       appBar: AppBar(
-        backgroundColor: Color(0xff687cf3),
-        title: Text('ESQUECI A SENHA'),
+        backgroundColor: const Color(0xff687cf3),
+        title: const Text('ESQUECI A SENHA'),
       ),
       body: Container(),
     );
