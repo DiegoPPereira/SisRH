@@ -22,9 +22,9 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff687cf3),
+      backgroundColor: const Color(0xff687cf3),
       appBar: AppBar(
-        backgroundColor: Color(0xff687cf3),
+        backgroundColor: const Color(0xff687cf3),
         title: Padding(
           padding: const EdgeInsets.only(
             left: 50,
@@ -32,49 +32,49 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
           child: Text('MENU PRINCIPAL'),
         ),
       ),
-      drawer: Drawer(
+      endDrawer: Drawer(
         child: ListView(
           children: [
             ListTile(
-              title: Text('HOLERITE'),
+              title: const Text('HOLERITE'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HoleritePage(),
+                    builder: (context) => const HoleritePage(),
                   ),
                 );
               },
             ),
             ListTile(
-              title: Text('INFORMAÇÕES DE RENDIMENTO'),
+              title: const Text('INFORMAÇÕES DE RENDIMENTO'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => informacaoDerendimento(),
+                    builder: (context) => const informacaoDerendimento(),
                   ),
                 );
               },
             ),
             ListTile(
-              title: Text('MEUS DADOS'),
+              title: const Text('MEUS DADOS'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MeusDadosPage(),
+                    builder: (context) => const MeusDadosPage(),
                   ),
                 );
               },
             ),
             ListTile(
-              title: Text('SAIR'),
+              title: const Text('SAIR'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => LoginPage(),
+                    builder: (context) => const LoginPage(),
                   ),
                 );
               },
