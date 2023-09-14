@@ -43,7 +43,7 @@ class SenhaAlterada extends StatelessWidget {
                   child: Container(
                     constraints: BoxConstraints(
                       maxWidth: 300,
-                      minWidth: 200,
+                      minWidth: 201,
                     ),
                     child: Text(
                       'Sua senha foi alterada com sucesso e pode ser e já pode ser ultilizada para realizar o login',
