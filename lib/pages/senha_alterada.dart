@@ -30,7 +30,7 @@ class SenhaAlterada extends StatelessWidget {
                     maxWidth: 500,
                     minWidth: 300,
                   ),
-                  child: Text(
+                  child: const Text(
                     'SENHA ALTERADA',
                     style: TextStyle(
                         color: Colors.white,
