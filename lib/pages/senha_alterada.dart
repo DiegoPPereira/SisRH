@@ -12,7 +12,7 @@ class SenhaAlterada extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-            top: 150,
+            top: 100,
             left: 20,
             right: 20,
           ),
@@ -20,23 +20,31 @@ class SenhaAlterada extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Icon(
+                  Icons.check, // Ícone de visto (checkmark)
+                  color: Colors.white,
+                  size: 200, // Tamanho do ícone
+                ),
                 Container(
                   constraints: BoxConstraints(
-                      // maxWidth: 500,
-                      // // minWidth: 300,
-                      ),
+                    maxWidth: 500,
+                    minWidth: 300,
+                  ),
                   child: Text(
                     'SENHA ALTERADA',
-                    style: TextStyle(color: Colors.white, fontSize: 30),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontStyle: FontStyle.italic),
                   ),
                 ),
                 SizedBox(height: 10),
                 Center(
                   child: Container(
                     constraints: BoxConstraints(
-                        // maxWidth: 300,
-                        // minWidth: 200,
-                        ),
+                      maxWidth: 300,
+                      minWidth: 200,
+                    ),
                     child: Text(
                       'Sua senha foi alterada com sucesso e pode ser e já pode ser ultilizada para realizar o login',
                       style: TextStyle(color: Colors.white, fontSize: 20),
