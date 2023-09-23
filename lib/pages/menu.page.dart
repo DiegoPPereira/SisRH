@@ -37,11 +37,11 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20), // Define o raio do botão
         ),
-        padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
       ),
       child: Text(
         text,
-        style: TextStyle(fontSize: 16), // Ajuste o tamanho da fonte
+        style: const TextStyle(fontSize: 16), // Ajuste o tamanho da fonte
       ),
     );
   }
@@ -52,8 +52,8 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
       backgroundColor: const Color(0xff687cf3),
       appBar: AppBar(
         backgroundColor: const Color(0xff687cf3),
-        title: Padding(
-          padding: const EdgeInsets.only(
+        title: const Padding(
+          padding: EdgeInsets.only(
             left: 50,
           ),
           child: Text('MENU PRINCIPAL'),
@@ -62,16 +62,20 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
       endDrawer: Drawer(
         child: ListView(
           children: [
-            SizedBox(height: 150),
+            const SizedBox(height: 150),
             createButton('HOLERITE', const HoleritePage(), context),
-            SizedBox(height: 10), // Reduzi o espaço entre os botões para 10
+            const SizedBox(
+                height: 10), // Reduzi o espaço entre os botões para 10
             createButton('INFORMAÇÕES DE RENDIMENTO',
                 const InformacaoDerendimento(), context),
-            SizedBox(height: 10), // Reduzi o espaço entre os botões para 10
+            const SizedBox(
+                height: 10), // Reduzi o espaço entre os botões para 10
             createButton('MEUS DADOS', const MeusDadosPage(), context),
-            SizedBox(height: 10), // Reduzi o espaço entre os botões para 10
+            const SizedBox(
+                height: 10), // Reduzi o espaço entre os botões para 10
             createButton('SAIR', const LoginPage(), context),
-            SizedBox(height: 10), // Reduzi o espaço entre os botões para 10
+            const SizedBox(
+                height: 10), // Reduzi o espaço entre os botões para 10
             Padding(
               padding: const EdgeInsets.only(
                 top: 150,
@@ -86,8 +90,8 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                       ),
                     );
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.only(
+                  child: const Padding(
+                    padding: EdgeInsets.only(
                       top: 20, // Reduzi o espaço acima do texto
                     ),
                     child: SizedBox(
@@ -118,12 +122,10 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                     width: 250,
                     child: Image.asset('assets/images/LogoSisRH.png'),
                   ),
-                  Container(
-                    child: Center(
-                      child: Text(
-                        'EM CONSTRUÇÃO',
-                        style: TextStyle(color: Colors.white, fontSize: 30),
-                      ),
+                  const Center(
+                    child: Text(
+                      'EM CONSTRUÇÃO',
+                      style: TextStyle(color: Colors.white, fontSize: 30),
                     ),
                   ),
                 ],
