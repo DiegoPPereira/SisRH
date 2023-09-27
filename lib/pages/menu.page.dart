@@ -66,8 +66,8 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
             createButton('HOLERITE', const HoleritePage(), context),
             const SizedBox(
                 height: 10), // Reduzi o espaço entre os botões para 10
-            createButton('INFORMAÇÕES DE RENDIMENTO',
-                const InformacaoDerendimento(), context),
+            createButton(
+                'INFORMAÇÕES DE RENDIMENTO', informacaoDerendimento(), context),
             const SizedBox(
                 height: 10), // Reduzi o espaço entre os botões para 10
             createButton('MEUS DADOS', const MeusDadosPage(), context),
