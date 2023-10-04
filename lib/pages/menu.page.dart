@@ -3,22 +3,19 @@ import 'package:sisrh/pages/holerite.dart';
 import 'package:sisrh/pages/informacaoDerendimento.dart';
 import './login.page.dart';
 import './meusdadospage.dart';
-import './informacaoDerendimento.dart';
-import './holerite.dart';
 import './temos.dart';
+import './informacaoDerendimento.dart';
 
 class MenuPrincipal extends StatefulWidget {
-  MenuPrincipal({
+  const MenuPrincipal({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<MenuPrincipal> createState() => _MenuPrincipalState();
+  _MenuPrincipalState createState() => _MenuPrincipalState();
 }
 
 class _MenuPrincipalState extends State<MenuPrincipal> {
-  PageController _pageController = PageController();
-
   ElevatedButton createButton(
       String text, Widget destination, BuildContext context) {
     return ElevatedButton(
@@ -31,17 +28,17 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
         );
       },
       style: ElevatedButton.styleFrom(
-        primary: Colors.white, // Cor de fundo branca
-        onPrimary: Colors.black, // Cor do texto preto
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white, // Cor do texto preto
         elevation: 2, // Adiciona uma leve sombra
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20), // Define o raio do botão
         ),
-        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 0),
       ),
       child: Text(
         text,
-        style: const TextStyle(fontSize: 16), // Ajuste o tamanho da fonte
+        style: const TextStyle(fontSize: 14), // Ajuste o tamanho da fonte
       ),
     );
   }
@@ -54,9 +51,9 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
         backgroundColor: const Color(0xff687cf3),
         title: const Padding(
           padding: EdgeInsets.only(
-            left: 50,
+            left: 100,
           ),
-          child: Text('MENU PRINCIPAL'),
+          child: Text('PERFIL'),
         ),
       ),
       endDrawer: Drawer(
@@ -67,18 +64,26 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
             const SizedBox(
                 height: 10), // Reduzi o espaço entre os botões para 10
             createButton(
-                'INFORMAÇÕES DE RENDIMENTO', informacaoDerendimento(), context),
+              'INFORMAÇÕES',
+              informacaoDerendimento(),
+              context,
+            ),
+
             const SizedBox(
                 height: 10), // Reduzi o espaço entre os botões para 10
             createButton('MEUS DADOS', const MeusDadosPage(), context),
             const SizedBox(
                 height: 10), // Reduzi o espaço entre os botões para 10
-            createButton('SAIR', const LoginPage(), context),
+            createButton(
+              'SAIR',
+              const LoginPage(),
+              context,
+            ),
             const SizedBox(
                 height: 10), // Reduzi o espaço entre os botões para 10
             Padding(
               padding: const EdgeInsets.only(
-                top: 150,
+                top: 250,
               ),
               child: Center(
                 child: InkWell(
@@ -92,7 +97,7 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                   },
                   child: const Padding(
                     padding: EdgeInsets.only(
-                      top: 20, // Reduzi o espaço acima do texto
+                      top: 10, // Reduzi o espaço acima do texto
                     ),
                     child: SizedBox(
                       child: Text(
@@ -110,28 +115,101 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
           ],
         ),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          reverse: true,
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  SizedBox(
-                    width: 250,
-                    child: Image.asset('assets/images/LogoSisRH.png'),
-                  ),
-                  const Center(
-                    child: Text(
-                      'EM CONSTRUÇÃO',
-                      style: TextStyle(color: Colors.white, fontSize: 30),
-                    ),
-                  ),
-                ],
+      body: const Center(
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: SizedBox(
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/images/diego2.jpg'),
+                  radius: 80.0,
+                ),
               ),
             ),
-          ),
+            SizedBox(
+              width: 400, // Defina a largura desejada
+              height: 400, // Defina a altura desejada
+              child: Card(
+                color: Colors.white,
+                elevation: 2,
+                child: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Center(
+                        child: Text(
+                          "Informações Pessoais",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                            fontStyle: FontStyle.italic,
+                            color: Color(0xff383a63),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        "Nome:                     Diego P. Pereia",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "Cargo:                     Develop Flutter",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "Chacha:                                 37911",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "RG:                             28.046.338-8",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "CPF:                       297.696.370-33",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "PIS:                        154.72388.23-0",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "Data de Nascimento: 11/02/1990",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "Email:      diego123@outlook.com",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "Telefone:               (64) 3971-7052",
+                        style:
+                            TextStyle(fontSize: 22, color: Color(0xff383a63)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

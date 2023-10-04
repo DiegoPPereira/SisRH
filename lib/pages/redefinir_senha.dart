@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sisrh/pages/redefinir_senha.dart';
 import './temos.dart';
-import './redefinir_senha.dart';
+import './senha_alterada.dart';
 
-class EsqueciSenhaPage extends StatelessWidget {
-  const EsqueciSenhaPage({Key? key}) : super(key: key);
+class RedefinirSenha extends StatelessWidget {
+  const RedefinirSenha({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +25,10 @@ class EsqueciSenhaPage extends StatelessWidget {
                   minWidth: 300,
                 ),
                 child: const Text(
-                  'ESQUECI MINHA SENHA',
+                  'REDEFINIR MINHA SENHA',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 28,
                       fontStyle: FontStyle.italic),
                 ),
               ),
@@ -39,10 +38,6 @@ class EsqueciSenhaPage extends StatelessWidget {
                   constraints: const BoxConstraints(
                     maxWidth: 300,
                     minWidth: 200,
-                  ),
-                  child: const Text(
-                    'Enviamos um link de redefinição de senha para o seu email',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ),
@@ -55,11 +50,16 @@ class EsqueciSenhaPage extends StatelessWidget {
                     keyboardType: TextInputType.emailAddress,
                     style: const TextStyle(color: Colors.white, fontSize: 15),
                     decoration: const InputDecoration(
-                      labelText: 'E-mail',
-                      prefixIcon: IconTheme(
-                        data: IconThemeData(color: Colors.white),
-                        child: Icon(Icons.account_box_outlined),
-                      ),
+                      labelText: 'Nova Senha',
+                      labelStyle: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  TextFormField(
+                    autofocus: true,
+                    keyboardType: TextInputType.emailAddress,
+                    style: const TextStyle(color: Colors.white, fontSize: 15),
+                    decoration: const InputDecoration(
+                      labelText: 'Confirme a Nova Senha',
                       labelStyle: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -69,7 +69,7 @@ class EsqueciSenhaPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const RedefinirSenha(),
+                          builder: (context) => const SenhaAlterada(),
                         ),
                       );
                     },

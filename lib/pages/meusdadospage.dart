@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class MeusDadosPage extends StatelessWidget {
   const MeusDadosPage({super.key});
@@ -8,10 +7,10 @@ class MeusDadosPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff687cf3),
+      backgroundColor: const Color(0xff687cf3),
       appBar: AppBar(
-        backgroundColor: Color(0xff687cf3),
-        title: Text('MEUS DADOS'),
+        backgroundColor: const Color(0xff687cf3),
+        title: const Text('MEUS DADOS'),
       ),
       body: Container(),
     );
