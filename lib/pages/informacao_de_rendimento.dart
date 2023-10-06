@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sisrh/core.dart';
 
-class MeusDadosPage extends StatelessWidget {
-  const MeusDadosPage({Key? key}) : super(key: key);
+class InformacaoDerendimento extends StatelessWidget {
+  const InformacaoDerendimento({super.key});
 
   ElevatedButton _createButton(
       String text, Widget destination, BuildContext context) {
@@ -84,7 +84,7 @@ class MeusDadosPage extends StatelessWidget {
       backgroundColor: const Color(0xff687cf3),
       appBar: AppBar(
         backgroundColor: const Color(0xff687cf3),
-        title: const Text('MEUS DADOS'),
+        title: const Text('INFIRMAÇÃO'),
       ),
       body: Container(),
     );

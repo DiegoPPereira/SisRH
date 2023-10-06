@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sisrh/pages/esquecia_senha.dart';
 import './temos.dart';
-import './menu.page.dart';
+import './menu_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -22,8 +22,8 @@ class _LoginPageState extends State<LoginPage> {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.only(
-              left: 40,
-              right: 40,
+              left: 10,
+              right: 10,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       autofocus: true,
                       keyboardType: TextInputType.emailAddress,
-                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      style: const TextStyle(color: Colors.white, fontSize: 15),
                       decoration: const InputDecoration(
                         labelText: 'LOGIN',
                         prefixIcon: IconTheme(
@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       keyboardType: TextInputType.number,
                       obscureText: true,
-                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      style: const TextStyle(color: Colors.white, fontSize: 15),
                       decoration: InputDecoration(
                         labelText: 'SENHA',
                         hintStyle: const TextStyle(color: Colors.white),
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -115,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Container(
                   height: 20,
                   alignment: Alignment.center,
@@ -132,9 +132,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(
-                    top: 50,
-                  ),
+                  padding: const EdgeInsets.only(top: 180),
                   child: Center(
                     child: InkWell(
                       onTap: () {
@@ -147,9 +145,13 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: const Padding(
                         padding: EdgeInsets.only(
-                          top: 150, // Ajuste o espaço acima do texto
+                            top: 10), // Ajuste o espaço acima do texto
+                        child: Text(
+                          "Termo de uso e Política de Privacidade",
+                          style: TextStyle(
+                              fontSize:
+                                  15), // Ajuste o tamanho da fonte conforme necessário
                         ),
-                        child: Text("Termo de uso e Política de Privacidade"),
                       ),
                     ),
                   ),

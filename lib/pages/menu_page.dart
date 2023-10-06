@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sisrh/pages/holerite.dart';
-import 'package:sisrh/pages/informacaoDerendimento.dart';
-import './login.page.dart';
-import './meusdadospage.dart';
-import './temos.dart';
-import './informacaoDerendimento.dart';
+import 'package:sisrh/core.dart';
 
 class MenuPrincipal extends StatefulWidget {
   const MenuPrincipal({
@@ -12,6 +7,7 @@ class MenuPrincipal extends StatefulWidget {
   }) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MenuPrincipalState createState() => _MenuPrincipalState();
 }
 
@@ -65,7 +61,7 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                 height: 10), // Reduzi o espaço entre os botões para 10
             createButton(
               'INFORMAÇÕES',
-              informacaoDerendimento(),
+              const InformacaoDerendimento(),
               context,
             ),
 

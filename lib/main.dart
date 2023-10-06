@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sisrh/pages/login.page.dart';
-import 'package:sisrh/pages/menu.page.dart';
+import 'package:sisrh/pages/menu_page.dart';
 
 void main() {
   runApp(const MainApp());

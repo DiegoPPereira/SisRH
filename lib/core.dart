@@ -5,9 +5,9 @@ it means you have to rename it to something more unique.
 */
 export 'package:sisrh/pages/esquecia_senha.dart';
 export 'package:sisrh/pages/holerite.dart';
-export 'package:sisrh/pages/informacaoDerendimento.dart';
+export 'package:sisrh/pages/informacao_de_rendimento.dart';
 export 'package:sisrh/pages/login.page.dart';
-export 'package:sisrh/pages/menu.page.dart';
+export 'package:sisrh/pages/menu_page.dart';
 export 'package:sisrh/pages/meusdadospage.dart';
 export 'package:sisrh/pages/senha_alterada.dart';
 export 'package:sisrh/pages/temos.dart';

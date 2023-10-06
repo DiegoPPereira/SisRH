@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sisrh/pages/redefinir_senha.dart';
-import './temos.dart';
-import './redefinir_senha.dart';
+import 'package:sisrh/core.dart';
 
 class EsqueciSenhaPage extends StatelessWidget {
   const EsqueciSenhaPage({Key? key}) : super(key: key);
